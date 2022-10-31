@@ -6,7 +6,7 @@ const Todos: React.FC<{ items: Todo[] }> = props => {
   return (
     <ul>
       {props.items.map(item => (
-        <Deed item={item} />
+        <Deed key={item.id} item={item} />
       ))}
     </ul>
   );
