@@ -1,0 +1,19 @@
+.form{
+    width:40rem;
+    margin: 2rem auto;
+}
+
+.form label{
+    display:block;
+    font-weigh: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form input {
+    display:block;
+    width:100%;
+    font: inherit;
+    font-size:1.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
