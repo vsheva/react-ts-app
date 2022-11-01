@@ -9,3 +9,5 @@ class Todo {
 }
 
 export default Todo;
+
+//const todos = [new Todo('Learn React'), new Todo('Learn TS')];
