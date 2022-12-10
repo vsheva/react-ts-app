@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Todo from '../models/todo';
 
+interface Props {
+  children: React.ReactNode;
+}
+
 //type
 type ContextObj = {
   items: Todo[];
@@ -16,7 +20,7 @@ export const TodoContext = React.createContext<ContextObj>({
 });
 
 //2.ContextProvider
-const ContextProvider: React.FC = props => {
+const ContextProvider: React.FC<Props> = ({ children }) => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   const addTaskHandler = (text: string) => {
@@ -35,7 +39,9 @@ const ContextProvider: React.FC = props => {
     removeTodo: removeTaskHandler,
   };
 
-  return <TodoContext.Provider value={contextValue}>{props.children}</TodoContext.Provider>;
+  return <TodoContext.Provider value={contextValue}>{children}</TodoContext.Provider>;
 };
 
 export default ContextProvider;
+
+//return <TodoContext.Provider value={contextValue}>{props.children}<TodoContext.Provider>;
