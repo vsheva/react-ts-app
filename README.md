@@ -1,4 +1,4 @@
-# [React TypeScript App](https://react-ts-olive.vercel.app)
+# [React TS App](https://react-ts-olive.vercel.app)
 
 
 
